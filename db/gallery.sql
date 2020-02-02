@@ -6,14 +6,14 @@ CREATE TABLE artists(
   name VARCHAR(255),
   age INT,
   DOB INT,
-  DOD INT
+  DOD INT NULL
 );
 
 CREATE TABLE exhibits(
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   category VARCHAR(255),
-  period INT,
+  period VARCHAR(255),
   displayed_since INT,
-  artist_id INT REFERENCES artists(id)
+  artist_id INT REFERENCES artists(id) ON DELETE CASCADE
 );
