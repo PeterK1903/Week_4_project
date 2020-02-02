@@ -1,0 +1,6 @@
+require( 'sinatra' )
+require( 'sinatra/contrib/all' )
+require( 'pry-byebug' )
+require_relative( '../models/exhibit.rb' )
+require_relative( '../models/artist.rb' )
+also_reload( '../models/*' )

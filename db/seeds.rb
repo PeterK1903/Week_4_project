@@ -34,6 +34,7 @@ exhibit1 = Exhibit.new(
   'category' => 'Painting',
   'period' =>'1900s',
   'displayed_since' => '1962',
+  'view' => '',
   'artist_id' => artist1.id
 );
 exhibit2 = Exhibit.new(
@@ -41,6 +42,7 @@ exhibit2 = Exhibit.new(
   'category' => 'Bust',
   'period' =>'1432',
   'displayed_since' => '1988',
+  'view' => '',
   'artist_id' => artist2.id
 );
 exhibit3 = Exhibit.new(
@@ -48,6 +50,7 @@ exhibit3 = Exhibit.new(
   'category' => 'Painting',
   'period' =>'2000s',
   'displayed_since' => '2013',
+  'view' => '',
   'artist_id' => artist3.id
 );
 exhibit4 = Exhibit.new(
@@ -55,6 +58,7 @@ exhibit4 = Exhibit.new(
   'category' => 'Painting',
   'period' =>'1900s',
   'displayed_since' => '2005',
+  'view' => '',
   'artist_id' => artist1.id
 );
 
