@@ -1,4 +1,4 @@
-<h1>Come enjoy our exhibits!</h1>
+<h1>Here are all the current exhibits on display at the Gallery!</h1>
 
 <table>
   <tr>
@@ -8,7 +8,7 @@
   </tr>
   <% for exhibit in @exhibits %>
   <tr>
-    <td><a href="/exhibits/<%= exhibit.id %>"><%= exhibit.name %></a></td>
+    <td><a href="exhibits/<%= exhibit.id %>"><%= exhibit.name %></a></td>
     <td><%= exhibit.category %></td>
     <td><%= exhibit.period %></td>
   </tr>

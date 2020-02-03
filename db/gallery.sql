@@ -6,7 +6,7 @@ CREATE TABLE artists(
   name VARCHAR(255),
   age INT,
   DOB INT,
-  DOD INT NULL
+  DOD INT
 );
 
 CREATE TABLE exhibits(
@@ -15,5 +15,6 @@ CREATE TABLE exhibits(
   category VARCHAR(255),
   period VARCHAR(255),
   displayed_since INT,
+  view VARCHAR(255),
   artist_id INT REFERENCES artists(id) ON DELETE CASCADE
 );

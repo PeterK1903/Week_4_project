@@ -1,0 +1,44 @@
+<h2> Edit <%= @exhibit.name %> </h2>
+<form method="post" action="/managers/exhibits/<%=@exhibit.id%>/edit">
+  <label for="name-field">Exhibit Name:</label>
+    <input
+    type="text"
+    name="name"
+    id="name-field"
+    value="<%= @exhibit.name %>"/>
+
+    <label for="artist_select">Select Artist:</label>
+    <select name="" id="artist_select" selected="<%= @exhibit.artist_id %>">
+      <% @artists.each do |artist| %>
+        <% if artist.id == @exhibit.artist_id %>
+          <option value=<%= artist.id %> selected><%= artist.name %></option>
+        <% else %>
+          <option value=<%= artist.id %>><%= artist.name %></option>
+          <% end %>
+        <% end %>
+    </select>
+
+  <label for="category-field">Category:</label>
+    <input
+    type="text"
+    name="category"
+    id="category-field"
+    value="<%= @exhibit.category %>"/>
+
+  <label for="period-field">Period:</label>
+    <input
+    type="text"
+    name="period"
+    id="period-field"
+    value="<%= @exhibit.period %>"/>
+
+  <label for="displayed_since-field">Displayed Since:</label>
+    <input
+    type="number"
+    name="displayed_since"
+    id="displayed_since-field"
+    value="<%= @exhibit.displayed_since %>"/>
+
+      <input id="edit-button" type="submit" value="Update Exhibit Info">
+
+</form>

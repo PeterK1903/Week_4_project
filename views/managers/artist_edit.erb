@@ -1,0 +1,33 @@
+<h2>Edit <%= @artist.name %></h2>
+<form method="post" action="/managers/artists/<%=@artist.id%>/edit">
+  <label for="name-field">Artist Name:</label>
+    <input
+    type="text"
+    name="name"
+    id="name-field"
+    value="<%= @artist.name %>"/>
+
+  <label for="age-field">Age:</label>
+    <input
+    type="number"
+    name="age"
+    id="age-field"
+    value="<%= @artist.age %>"/>
+
+  <label for="dob-field">DOB:</label>
+    <input
+    type="number"
+    name="dob"
+    id="dob-field"
+    value="<%= @artist.dob %>"/>
+
+  <label for="dod-field">DOD:</label>
+    <input
+    type="number"
+    name="dod"
+    id="dod-field"
+    value="<%= @artist.dod %>"/>
+
+      <input id="edit-button" type="submit" value="Update Artist Info">
+
+</form>

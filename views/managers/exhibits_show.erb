@@ -1,0 +1,6 @@
+<h1><%= @exhibit.name%> (Exhibit)</h1>
+
+
+<form action="/managers/exhibits/<%= @exhibit.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+
+<a href="/managers/exhibits/<%= @exhibit.id %>/edit">Edit</a>

@@ -1,9 +1,11 @@
-<h1><%= @artist.name%> (artist)</h1>
+<h1><%= @artist.name%> (Artist)</h1>
 
 <h3>Pieces held by our gallery:</h3>
 
 <ul>
   <% @artist.exhibits.each do |exhibit| %>
   <li><%= exhibit.name %></li>
+  <li><%= exhibit.category %></li>
+  <li><%= exhibit.period %></li>
   <% end %>
 </ul>

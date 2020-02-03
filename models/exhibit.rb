@@ -11,29 +11,37 @@ def initialize( options )
     @category = options['category']
     @period = options['period']
     @displayed_since = options['displayed_since']
+    @view = options['view']
     @artist_id = options['artist_id'].to_i
 end
 
 def save()
-  sql = "INSERT INTO exhibits (name, category, period, displayed_since, artist_id)
-        VALUES ($1,$2,$3,$4,$5)
+  sql = "INSERT INTO exhibits (name, category, period, displayed_since, view, artist_id)
+        VALUES ($1,$2,$3,$4,$5,$6)
         RETURNING id"
-  values = [@name, @category, @period, @displayed_since, @artist_id]
+  values = [@name, @category, @period, @displayed_since, @view, @artist_id]
   results = SqlRunner.run(sql, values)
   @id = results.first()['id'].to_i
+end
+
+def delete()
+  sql = "DELETE FROM exhibits
+  WHERE id = $1"
+  values = [@id]
+  SqlRunner.run(sql, values)
 end
 
 def update()
   sql = "UPDATE exhibits
   SET
   (
-    name, category, period, displayed_since, artist_id
+    name, category, period, displayed_since, view, artist_id
   ) =
   (
-    $1, $2, $3, $4, $5
+    $1, $2, $3, $4, $5, $6
   )
-  WHERE id = $6"
-  values = [@name, @age, @dob, @dod, @artist_id, @id]
+  WHERE id = $7"
+  values = [@name, @age, @dob, @dod, @artist_id, @view, @id]
   SqlRunner.run(sql, values)
 end
 

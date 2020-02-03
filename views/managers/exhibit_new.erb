@@ -1,0 +1,40 @@
+<form method="post" action="/managers/exhibits">
+
+  <label for="name-field">Exhibit Name:</label>
+    <input id="name-field "type="text" name="name"/>
+
+    <label for="category-selection">Select a Category:</label>
+    <select name="category" id="category-selection">
+      <option value="Painting">Painting</option>
+      <option value="Bust">Bust</option>
+      <option value="Sculpture">Sculpture</option>
+      <option value="Cinema">Cinema</option>
+    </select>
+
+    <label for="period-selection">Select a Period:</label>
+    <select name="period" id="period-selection">
+      <option value="1400s">1400s</option>
+      <option value="1500s">1500s</option>
+      <option value="1600s">1600s</option>
+      <option value="1700s">1700s</option>
+      <option value="1800s">1800s</option>
+      <option value="1900s">1900s</option>
+      <option value="2000s">2000s</option>
+    </select>
+
+  <label for="displayed-since-field">Displayed Since:</label>
+    <input id="displayed-since-field" type="number" name="displayed_since"/>
+
+    <label for="view-field">View:</label>
+  <input id="view-field" type="text" name="view"/>
+
+
+  <label for="artist-selection">Select an Artist:</label>
+    <select name="artist_id" id="artist-selection">
+    <% @artists.each do |artist| %>
+        <option value=<%= artist.id %> > <%= artist.name %> </option>
+    <% end %>
+    </select>
+
+    <input id="add-button" type="submit" value="Add Exhibit">
+</form>

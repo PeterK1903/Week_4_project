@@ -1,0 +1,18 @@
+<h1>Here are all the currrent artists who have work displayed at the gallery</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Year Of Birth</th>
+    <th>Year Of Death</th>
+  </tr>
+  <% for artist in @artists %>
+  <tr>
+    <td><a href="artists/<%= artist.id %>"><%= artist.name %></a></td>
+    <td><%= artist.age %></td>
+    <td><%= artist.dob %></td>
+    <td><%= artist.dod %></td>
+  </tr>
+  <% end %>
+</table>
