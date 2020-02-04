@@ -3,7 +3,7 @@ require_relative( '../db/sql_runner' )
 class Exhibit
 
 attr_reader :id, :artist_id
-attr_accessor :name, :category, :period, :displayed_since
+attr_accessor :name, :category, :period, :displayed_since, :view
 
 def initialize( options )
     @id = options['id'].to_i if options['id']
@@ -41,7 +41,7 @@ def update()
     $1, $2, $3, $4, $5, $6
   )
   WHERE id = $7"
-  values = [@name, @age, @dob, @dod, @artist_id, @view, @id]
+  values = [@name, @category, @period, @displayed_since, @view, @artist_id, @id]
   SqlRunner.run(sql, values)
 end
 

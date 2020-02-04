@@ -8,7 +8,7 @@
     value="<%= @exhibit.name %>"/>
 
     <label for="artist_select">Select Artist:</label>
-    <select name="" id="artist_select" selected="<%= @exhibit.artist_id %>">
+    <select name="artist_id" id="artist_select" selected="<%= @exhibit.artist_id %>">
       <% @artists.each do |artist| %>
         <% if artist.id == @exhibit.artist_id %>
           <option value=<%= artist.id %> selected><%= artist.name %></option>
@@ -31,6 +31,13 @@
     name="period"
     id="period-field"
     value="<%= @exhibit.period %>"/>
+
+  <label for="view-field">Image:</label>
+    <input
+    type="text"
+    name="view"
+    id="view-field"
+    value="<%= @exhibit.view %>"/>
 
   <label for="displayed_since-field">Displayed Since:</label>
     <input

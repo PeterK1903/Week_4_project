@@ -5,12 +5,17 @@
     <th>Name</th>
     <th>Category</th>
     <th>Period</th>
+    <th>Displayed Since</th>
+    <th>Image:</th>
+
   </tr>
   <% for exhibit in @exhibits %>
   <tr>
     <td><a href="exhibits/<%= exhibit.id %>"><%= exhibit.name %></a></td>
     <td><%= exhibit.category %></td>
     <td><%= exhibit.period %></td>
+    <td><%= exhibit.displayed_since %></td>
+    <td><%= exhibit.view %></td>
   </tr>
   <% end %>
 </table>
