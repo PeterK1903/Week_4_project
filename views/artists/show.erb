@@ -1,11 +1,15 @@
 <h1><%= @artist.name%> (Artist)</h1>
 
-<h3>Pieces held by our gallery:</h3>
+<h3>Pieces held by our gallery:(Name, Category, Displayed Since, Artist)</h3>
 
-<ul>
+<div class="show_info">
   <% @artist.exhibits.each do |exhibit| %>
-  <li><%= exhibit.name %></li>
-  <li><%= exhibit.category %></li>
-  <li><%= exhibit.period %></li>
+  <div class="textp">
+  <p> <%= exhibit.name %> </p>
+  <p> <%= exhibit.category %> </p>
+  <p> <%= exhibit.displayed_since %> </p>
+  <p> <%= @artist.name %> <p>
+    </div>
+  <img class="artist_pic" src="<%= exhibit.view %>"/>
   <% end %>
-</ul>
+</div>

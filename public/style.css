@@ -1,5 +1,5 @@
 header img {
-    height: 200px;
+    height: 150px;
 }
 
 body {
@@ -19,8 +19,7 @@ header {
     height: 80px;
     display: flex;
     align-items: center;
-    box-shadow: 0 0 25px 0 black;
-    border: 1px solid black;
+    box-shadow: 0 0 50px 0 black;
 }
 
 header * {
@@ -40,4 +39,97 @@ header li a {
 li a:hover {
   background-color: black;
   color:white
+}
+
+img.animated-gif{
+  width: 1200px;
+  height: auto;
+}
+
+img.artist_pic{
+  width: 600px;
+  height: auto;
+}
+
+.show_info{
+  background-image: url=("https://external-preview.redd.it/vamnazEWjPlQWM3jZyVP6PbL_Ql93UCSfvb25Czrt4w.png?width=640&crop=smart&auto=webp&s=5e5213d85c2c4d44de74932979c264460bc19853")
+  color: white;
+  box-shadow: 0 0 25px 0 black;
+  border-radius: 25px;
+  border: 1px solid black;
+  font-size: 20px;
+}
+
+.homepage_header{
+  font-size: 25px;
+  text-align: center;
+}
+
+.showing_artists{
+  background-image: url=("https://external-preview.redd.it/vamnazEWjPlQWM3jZyVP6PbL_Ql93UCSfvb25Czrt4w.png?width=640&crop=smart&auto=webp&s=5e5213d85c2c4d44de74932979c264460bc19853")
+  color: white;
+  box-shadow: 0 0 25px 0 black;
+  border-radius: 25px;
+  border: 1px solid black;
+  font-size: 20px;
+  margin: auto;
+}
+ .textp {
+  font-weight: 400;
+  border-radius: 25px;
+  border: 1px solid black;
+  text-shadow: 0 1px 0 black;
+ }
+
+.showing_exhibits{
+  box-shadow: 0 0 25px 0 black;
+  border-radius: 25px;
+  border: 1px solid black;
+  font-size: 30px
+}
+
+th{
+  padding: 40px;
+  text-align: left;
+}
+
+h4{
+  background-color: white;
+  box-shadow: 0 0 25px 0 black;
+  border-radius: 25px;
+  border: 1px solid black;
+  font-size: 18px;
+  text-align: center;
+}
+
+h5{
+  background-color: white;
+  box-shadow: 0 0 25px 0 black;
+  border-radius: 25px;
+  border: 1px solid black;
+  font-size: 18px;
+  text-align: center;
+}
+
+.manager_view{
+
+  background-color: white;
+  box-shadow: 0 0 25px 0 black;
+  border-radius: 25px;
+  border: 1px solid black;
+  font-size: 18px;
+  text-align: center;
+
+}
+
+.managers_page{
+
+  background-color: white;
+  box-shadow: 0 0 25px 0 black;
+  border-radius: 25px;
+  border: 1px solid black;
+  font-size: 18px;
+  text-align: left;
+
+
 }

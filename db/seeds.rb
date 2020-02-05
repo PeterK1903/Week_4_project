@@ -20,11 +20,18 @@ artist3 = Artist.new(
   'name' => 'Joe Hargan',
   'age' => '68',
   'dob' => '1952',
-  'dod' => '0000'
+  'dod' => '2020'
+);
+artist4 = Artist.new(
+  'name' => 'Lawrence Macdonald',
+  'age' => '79',
+  'dob' => '1799',
+  'dod' => '1878'
 );
 artist1.save()
 artist2.save()
 artist3.save()
+artist4.save()
 artist1.age ="77"
 artist1.update()
 
@@ -34,7 +41,7 @@ exhibit1 = Exhibit.new(
   'category' => 'Painting',
   'period' =>'1900s',
   'displayed_since' => '1962',
-  'view' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tate.org.uk%2Fart%2Fartworks%2Fmatisse-the-snail-t00540&psig=AOvVaw3ZpKxEMigAeuXivmhExVL_&ust=1580809100985000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNjUm_mKtecCFQAAAAAdAAAAABAE',
+  'view' => 'https://uploads8.wikiart.org/images/henri-matisse/the-snail-1953.jpg',
   'artist_id' => artist1.id
 );
 exhibit2 = Exhibit.new(
@@ -42,7 +49,7 @@ exhibit2 = Exhibit.new(
   'category' => 'Bust',
   'period' =>'1400s',
   'displayed_since' => '1988',
-  'view' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ANiccolo_da_Uzzano_by_Donatello_-_cast.jpg&psig=AOvVaw1Ihx6F4R7SobWSFxeYIWBf&ust=1580809144808000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMj2io6LtecCFQAAAAAdAAAAABAE',
+  'view' => 'https://upload.wikimedia.org/wikipedia/commons/1/19/Niccolo_da_Uzzano_by_Donatello_-_cast.jpg',
   'artist_id' => artist2.id
 );
 exhibit3 = Exhibit.new(
@@ -50,7 +57,7 @@ exhibit3 = Exhibit.new(
   'category' => 'Painting',
   'period' =>'2000s',
   'displayed_since' => '2013',
-  'view' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fjoeharganartist.com%2Fproject%2Fthe-gaffer%2F&psig=AOvVaw1Y96YheCCgCzRDe2bMoyYA&ust=1580809183604000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOCYxKCLtecCFQAAAAAdAAAAABAE',
+  'view' => 'https://joeharganartist.com/wp-content/uploads/2018/02/The-Gaffer-20x20-inches-oil-on-canvas.jpg',
   'artist_id' => artist3.id
 );
 exhibit4 = Exhibit.new(
@@ -58,14 +65,51 @@ exhibit4 = Exhibit.new(
   'category' => 'Painting',
   'period' =>'1900s',
   'displayed_since' => '2005',
-  'view' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FThe_Sorrows_of_the_King&psig=AOvVaw0y9bM7UFZUWAXozyEnQHQN&ust=1580809213750000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPCx_66LtecCFQAAAAAdAAAAABAE',
+  'view' => 'https://www.henrimatisse.org/images/gallery/sorrow-of-the-king.jpg',
   'artist_id' => artist1.id
 );
+
+exhibit5 = Exhibit.new(
+  'name' => 'St George',
+  'category' => 'Sculpture',
+  'period' =>'1400s',
+  'displayed_since' => '2012',
+  'view' => 'https://www.artble.com/imgs/9/b/6/927460/331211.jpg',
+  'artist_id' => artist2.id
+)
+exhibit6 = Exhibit.new(
+  'name' => 'Pip',
+  'category' => 'Painting',
+  'period' =>'2000s',
+  'displayed_since' => '2020',
+  'view' => 'https://joeharganartist.com/wp-content/uploads/2018/01/PiP-oil-on-canvas-72-x-54-inches-768x1022.jpg',
+  'artist_id' => artist3.id
+)
+exhibit7 = Exhibit.new(
+  'name' => 'General Sir David Baird',
+  'category' => 'Sculpture',
+  'period' =>'1800s',
+  'displayed_since' => '2010',
+  'view' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Gen_Sir_David_Baird_by_Lawrence_MacDonald%2C_NGS.jpg/1024px-Gen_Sir_David_Baird_by_Lawrence_MacDonald%2C_NGS.jpg',
+  'artist_id' => artist4.id
+)
+exhibit8 = Exhibit.new(
+  'name' => 'Monument to Emily Georgiana',
+  'category' => 'Sculpture',
+  'period' =>'1800s',
+  'displayed_since' => '2004',
+  'view' => 'https://live.staticflickr.com/5523/11183465033_b1e6cd1c2f_b.jpg',
+  'artist_id' => artist4.id
+)
 
 exhibit1.save()
 exhibit2.save()
 exhibit3.save()
 exhibit4.save()
+exhibit5.save()
+exhibit6.save()
+exhibit7.save()
+exhibit8.save()
 
 binding.pry
 nil

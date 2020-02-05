@@ -1,12 +1,13 @@
 <h1>Here are all the current exhibits on display at the Gallery!</h1>
 
+<div class="manager_view">
 <table>
   <tr>
     <th>Name</th>
     <th>Category</th>
     <th>Period</th>
     <th>Displayed Since</th>
-    <th>Image:</th>
+    <th>View:</th>
 
   </tr>
   <% for exhibit in @exhibits %>
@@ -15,7 +16,8 @@
     <td><%= exhibit.category %></td>
     <td><%= exhibit.period %></td>
     <td><%= exhibit.displayed_since %></td>
-    <td><%= exhibit.view %></td>
+    <td><img src="<%= exhibit.view %>" width="295" height="300"</td>
   </tr>
   <% end %>
 </table>
+</div>

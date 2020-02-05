@@ -1,16 +1,24 @@
 <h1>Come enjoy our exhibits!</h1>
 
+
+<div class="showing_exhibits">
+
 <table>
   <tr>
     <th>Name</th>
     <th>Category</th>
     <th>Period</th>
+    <th>Displayed Since</th>
+    <th>View</th>
   </tr>
   <% for exhibit in @exhibits %>
   <tr>
     <td><a href="/exhibits/<%= exhibit.id %>"><%= exhibit.name %></a></td>
     <td><%= exhibit.category %></td>
     <td><%= exhibit.period %></td>
+    <td><%= exhibit.displayed_since %></td>
+    <td><img src="<%= exhibit.view %>" width="295" height="300"</td>
   </tr>
   <% end %>
 </table>
+</div>

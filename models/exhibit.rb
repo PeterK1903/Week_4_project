@@ -64,4 +64,29 @@ sql = "DELETE FROM exhibits"
 SqlRunner.run(sql)
 end
 
+def self.map_items(exhibit_data)
+  return exhibit_data.map { |exhibit| Exhibit.new(exhibit)}
+end
+
+def self.find_by_category(category)
+  sql = "SELECT * FROM exhibits WHERE category = $1"
+  values = [category]
+  result = SqlRunner.run(sql, values)
+  category = result.map{|exhibit| Exhibit.new(exhibit)}
+  return category
+end
+
+def self.find_by_artist_id(artist_id)
+  sql = "SELECT * FROM exhibits WHERE artist_id = $1"
+  values = [artist_id]
+  result = SqlRunner.run(sql, values)
+  exhibits = Exhibit.map_items(result)
+  return exhibits
+end
+
+def artist()
+  artist = Artist.find_by_id(@artist_id)
+  return artist
+end
+
 end

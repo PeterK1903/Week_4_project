@@ -1,18 +1,32 @@
 <h1>Meet the Artists!</h1>
 
+
+
+<div class="showing_artists">
 <table>
+  <th>Donatello</th>
+  <th>Joe Hargan</th>
+  <th>Henri Matisse</th>
+  <th>Lawrence Macdonald</th>
   <tr>
-    <th>Name</th>
-    <th>Age</th>
-    <th>Year Of Birth</th>
-    <th>Year Of Death</th>
+
   </tr>
-  <% for artist in @artists %>
-  <tr>
-    <td><a href="/artists/<%= artist.id %>"><%= artist.name %></a></td>
-    <td><%= artist.age %></td>
-    <td><%= artist.dob %></td>
-    <td><%= artist.dod %></td>
-  </tr>
-  <% end %>
+    <td><a href="http://localhost:4567/artists/2">
+           <img alt="Donatello" src="https://hoysupe.com/wp-content/uploads/2018/12/donato.png"
+           width="295" height="300">
+        </a></td>
+    <td><a href="http://localhost:4567/artists/3">
+           <img alt="Joe Hargan" src="https://homesandinteriorsscotland.com/wp-content/uploads/2018/05/Unknown-1.jpeg"
+           width="295" height="300">
+        </a></td>
+    <td><a href="http://localhost:4567/artists/1">
+           <img alt="Henri Matisse" src="https://cdn.britannica.com/23/189523-050-214F59F1/Henri-Matisse-photograph-Alvin-Langdon-Coburn-1913.jpg"
+           width="295" height="300">
+        </a></td>
+    <td><a href="http://localhost:4567/artists/4">
+           <img alt="Lawrence Macdonald" src="https://upload.wikimedia.org/wikipedia/commons/1/10/Lawrence_Macdonald_by_John_Hutchison%2C_SNPG.JPG"
+           width="295" height="300">
+        </a></td>
 </table>
+
+</div>

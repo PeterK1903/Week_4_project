@@ -1,5 +1,9 @@
 <h1><%= @artist.name %> (Artist)</h1>
 
+<div class="manager_view">
+
 <form action="/managers/artists/<%= @artist.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
 
 <a href="/managers/artists/<%= @artist.id %>/edit">Edit</a>
+
+</div>
